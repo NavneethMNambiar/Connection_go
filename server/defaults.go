@@ -30,7 +30,7 @@ func defaultPricePlans() []domain.PricePlan {
 }
 
 func defaultSmartMeterToPricePlanAccounts() map[string]string {
-	return map[string]string {
+	return map[string]string{
 		"smart-meter-0": "price-plan-0",
 		"smart-meter-1": "price-plan-1",
 		"smart-meter-2": "price-plan-0",
@@ -42,7 +42,7 @@ func defaultSmartMeterToPricePlanAccounts() map[string]string {
 func defaultMeterElectricityReadings() map[string][]domain.ElectricityReading {
 	res := map[string][]domain.ElectricityReading{}
 	for k := range defaultSmartMeterToPricePlanAccounts() {
-		res[k] = generateElectricityReadings(20)
+		res[k] = generateElectricityReadings(5)
 	}
 	return res
 }
